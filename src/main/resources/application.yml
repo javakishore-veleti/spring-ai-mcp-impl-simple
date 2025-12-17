@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: Spring AI MCP Impl Simple
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY:ANTHROPIC_API_KEY_UN_DEFINED}
+      chat:
+        options:
+          model: claude-opus-4-20250514
+    # configuration for MCP clients - two pre-built MCP server implementations: Brave Search and Filesystem.
+    # These servers will enable our chatbot to perform web searches and filesystem operations.
+    mcp:
+      client:
+        stdio:
+          connections:
+            brave-search:
+              command: npx
+              args:
+                - "-y"
+                - "@modelcontextprotocol/server-brave-search"
+              env:
+                BRAVE_API_KEY: ${BRAVE_API_KEY:BRAVE_API_KEY_UN_DEFINED}
+            filesystem:
+              command: npx
+              args:
+                - "-y"
+                - "@modelcontextprotocol/server-filesystem"
+                - "./"
+
+
+feature:
+  toggles:
+    author-tools:
+      enabled: true
