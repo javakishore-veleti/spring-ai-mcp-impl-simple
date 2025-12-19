@@ -1,8 +1,8 @@
-package com.jk.labs.spring_ai.mcp.api;
+package com.jk.labs.spring_ai.mcp.client.api;
 
-import com.jk.labs.spring_ai.mcp.dto.ChatRequest;
-import com.jk.labs.spring_ai.mcp.dto.ChatResponse;
-import com.jk.labs.spring_ai.mcp.service.ChatService;
+import com.jk.labs.spring_ai.mcp.common.dto.ChatRequest;
+import com.jk.labs.spring_ai.mcp.common.dto.ChatResponse;
+import com.jk.labs.spring_ai.mcp.client.service.ChatService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

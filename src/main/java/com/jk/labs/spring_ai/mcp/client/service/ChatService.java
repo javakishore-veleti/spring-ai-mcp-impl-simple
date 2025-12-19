@@ -1,4 +1,4 @@
-package com.jk.labs.spring_ai.mcp.service;
+package com.jk.labs.spring_ai.mcp.client.service;
 
 public interface ChatService {
 

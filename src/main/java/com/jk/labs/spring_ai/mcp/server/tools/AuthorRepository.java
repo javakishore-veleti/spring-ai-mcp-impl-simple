@@ -1,6 +1,6 @@
-package com.jk.labs.spring_ai.mcp.tools;
+package com.jk.labs.spring_ai.mcp.server.tools;
 
-import com.jk.labs.spring_ai.mcp.dto.Author;
+import com.jk.labs.spring_ai.mcp.common.dto.Author;
 import org.springframework.ai.tool.annotation.Tool;
 
 import java.util.List;
